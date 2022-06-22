@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Dashboard</title>
+    <script src="./javascript/script.js"></script>
+    <script src="./javascript/toggle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  
+   
+</head>
+<body>
+    
+    <div class="main">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <i id="menu2" class="fa-solid fa-bars"></i>
+                <div class="logo"><h1>SA <span class="logo-pink">Certified</span></h1></div>
+                <div class="sidebar-two">
+                <li><i class="fa-solid fa-chart-line"></i><a class="dashboard-text" href="">Dashboard</a></li>
+                <div class="sidebar-sections">
+                    <li class="sidebar-list sidebar-active"><i class="fa-solid fa-compass-drafting"></i><p class="sidebar-links" href="">Indigenous Spend <br />(Project Related)</p></li>
+                    <li class="sidebar-list sidebar-active"><i class="fa-solid fa-compass-drafting"></i><a class="sidebar-links" href="">Community Investment <br /> (Non-Project Related)</a></li>
+                    <li class="sidebar-list sidebar-active"><i class="fa-solid fa-compass-drafting"></i><a class="sidebar-links" href="">Indigenous Employment</a></li>
+                    <li class="sidebar-list sidebar-active"><i class="fa-solid fa-compass-drafting"></i><a class="sidebar-links" href="">Projects</a></li>
+                    <li class="sidebar-list sidebar-active"><i class="fa-solid fa-compass-drafting"></i><a class="sidebar-links" href="">Authentication</a></li>
+                    <li class="sidebar-list sidebar-active"><i class="fa-solid fa-compass-drafting"></i><a class="sidebar-links" href="">Accreditation</a></li>
+                    <li class="sidebar-list sidebar-active"><i class="fa-solid fa-compass-drafting"></i><a class="sidebar-links" href="">Queries/Reports</a></li>
+                    <li class="sidebar-list sidebar-active"><i class="fa-solid fa-compass-drafting"></i><a class="sidebar-links" href="">Connections/Vendors</a></li>
+                    <li class="sidebar-list sidebar-active"><i class="fa-solid fa-compass-drafting"></i><a class="sidebar-links" href="">Advanced </a></li>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="sub-main">
+            
+            <div class="top-nav">
+                <i id="menu" class="fa-solid fa-bars mobile-menu-main"></i>
+                <h2 class="top-button">Logout</h2>
+            </div>
+
+            <div class="dashboard-main">
+                <div class="dashboard-space">
+                <h2 class="dashboard-main-title">Projects</h2> 
+                <div class="dashboard-grid">
+                    <div class="dashboard-box">
+                        <div onclick="toggle1()" class="dashboard-box-out">
+                            <div class="dashboard-box-card">
+                                <h2 class="dashboard-box-title">New Project</h2><i class="fa-solid fa-circle-plus"></i>
+                            </div>
+                        </div>
+                        <div  class="dashboard-box-input" id="div1">
+                            <input class="input-mode" type="text" placeholder="Project Name">
+                        </div>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div class="dashboard-box">
+                            <div onclick="toggle2()" class="dashboard-box-out">
+                                <div class="dashboard-box-card">
+                                    <h2 class="dashboard-box-title">Business Analytics</h2><i class="fa-solid fa-circle-plus"></i>
+                                </div>
+                            </div>
+                            <div class="dashboard-box-input" id="div2">
+                                <input class="input-mode" type="text" placeholder="Project Name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div class="dashboard-box">
+                            <div onclick="toggle3()" class="dashboard-box-out" >
+                                <div  class="dashboard-box-card">
+                                    <h2 class="dashboard-box-title">Coding</h2><i class="fa-solid fa-circle-plus"></i>
+                                </div>
+                            </div>
+                            <div class="dashboard-box-input" id="div3">
+                                <input class="input-mode" type="text" placeholder="Project ID">
+                                <input class="input-mode" type="text" placeholder="Unique ID">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div class="dashboard-box">
+                            <div class="dashboard-box-out">
+                                <div onclick="toggle4()" class="dashboard-box-card">
+                                    <h2 class="dashboard-box-title">Add Vendors/Suppliers</h2><i class="fa-solid fa-circle-plus"></i>
+                                </div>
+                            </div>
+                            <div class="dashboard-box-input" id="div4">
+                                <input class="input-mode-read" value="Project Owner" type="text" placeholder="Project Name" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="board">
+                    <div class="table-box">
+                        <div class="table-row-main">
+
+                            <div class="table-cell-2">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="table-cell">
+                               <li class="sort-list"> <p>Project Name</p> <i class="fa-solid fa-sort"></i> </li>
+                            </div>
+                            <div class="table-cell">
+                                <li class="sort-list"> <p>Project Owner</p> <i class="fa-solid fa-sort"></i> </li>
+                            </div>
+                            <div class="table-cell">
+                                <li class="sort-list"> <p>Project ID</p> <i class="fa-solid fa-sort"></i> </li>
+                            </div>
+                            <div class="table-cell">
+                                <li class="sort-list"> <p>Date Created</p> <i class="fa-solid fa-sort"></i> </li>
+                            </div>
+                            <div class="table-cell">
+                                <li class="sort-list"> <p>More</p> <i class="fa-solid fa-sort"></i> </li>
+                            </div>
+
+                        </div> 
+                    </div>
+
+                    <div class="table-box">
+                        <div class="table-row">
+                            <div class="table-cell-2">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="table-cell">
+                                <p>Indigenous Community</p>
+                            </div>
+                            <div class="table-cell">
+                                <div class="">
+                                    <div class="user">
+                                    <img class="avatar" src="https://github.com/jonrohan.png?v=3&s=96"  />
+                                    <p class="avatar-name">Narasccha Anderson</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-cell">
+                                <p>PD2658696</p>
+                            </div>
+                            <div class="table-cell">
+                                <p class="hello">16 OCT 2022</p>
+                                <p>yes</p>
+                            </div>
+                            <div class="table-cell">
+                                <div data-dropdown class="dropdown-menu">
+                                    <i data-dropdown-btn class="fa-solid fa-ellipsis-vertical link"> </i>
+                                    <div class="dropdown-list">
+                                        <li class="list-flex"><p class="options">Subsidiary</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Division</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Project Site</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Business Unit</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Brnach</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Product Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Functional Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Region</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                    </div>
+                                </div>
+                                    
+                               
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="table-box">
+                        <div class="table-row">
+                            <div class="table-cell-2">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="table-cell">
+                                <p>Indigenous Community</p>
+                            </div>
+                            <div class="table-cell">
+                                <div class="">
+                                    <div class="user">
+                                    <img class="avatar" src="https://github.com/jonrohan.png?v=3&s=96"  />
+                                    <p class="avatar-name">Narasccha Anderson</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-cell">
+                                <p>PD2658696</p>
+                            </div>
+                            <div class="table-cell">
+                                <p class="hello">16 OCT 2022</p>
+                            </div>
+                            <div class="table-cell">
+                                <div data-dropdown class="dropdown-menu">
+                                    <i data-dropdown-btn class="fa-solid fa-ellipsis-vertical link"> </i>
+                                    <div class="dropdown-list">
+                                        <li class="list-flex"><p class="options">Subsidiary</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Division</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Project Site</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Business Unit</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Brnach</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Product Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Functional Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Region</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="table-box">
+                        <div class="table-row">
+                            <div class="table-cell-2">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="table-cell">
+                                <p>Indigenous Community</p>
+                            </div>
+                            <div class="table-cell">
+                                <div class="">
+                                    <div class="user">
+                                    <img class="avatar" src="https://github.com/jonrohan.png?v=3&s=96"  />
+                                    <p class="avatar-name">Narasccha Anderson</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-cell">
+                                <p>PD2658696</p>
+                            </div>
+                            <div class="table-cell">
+                                <p class="hello">16 OCT 2022</p>
+                            </div>
+                            <div class="table-cell">
+                                <div data-dropdown class="dropdown-menu">
+                                    <i data-dropdown-btn class="fa-solid fa-ellipsis-vertical link"> </i>
+                                    <div class="dropdown-list">
+                                        <li class="list-flex"><p class="options">Subsidiary</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Division</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Project Site</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Business Unit</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Brnach</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Product Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Functional Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Region</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                    </div>
+                                </div>
+                                    
+                               
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="table-box">
+                        <div class="table-row">
+                            <div class="table-cell-2">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="table-cell">
+                                <p>Indigenous Community</p>
+                            </div>
+                            <div class="table-cell">
+                                <div class="">
+                                    <div class="user">
+                                    <img class="avatar" src="https://github.com/jonrohan.png?v=3&s=96"  />
+                                    <p class="avatar-name">Narasccha Anderson</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-cell">
+                                <p>PD2658696</p>
+                            </div>
+                            <div class="table-cell">
+                                
+                                <p class="hello">16 OCT 2022</p>
+                            </div>
+                            <div class="table-cell">
+                                <div data-dropdown class="dropdown-menu">
+                                    <i data-dropdown-btn class="fa-solid fa-ellipsis-vertical link"> </i>
+                                    <div class="dropdown-list">
+                                        <li class="list-flex"><p class="options">Subsidiary</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Division</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Project Site</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Business Unit</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Brnach</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Product Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Functional Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Region</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                    </div>
+                                </div>
+                                    
+                               
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="table-box">
+                        <div class="table-row">
+                            <div class="table-cell-2">
+                                <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="table-cell">
+                                <p>Indigenous Community</p>
+                            </div>
+                            <div class="table-cell">
+                                <div class="">
+                                    <div class="user">
+                                    <img class="avatar" src="https://github.com/jonrohan.png?v=3&s=96"  />
+                                    <p class="avatar-name">Narasccha Anderson</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-cell">
+                                <p>PD2658696</p>
+                            </div>
+                            <div class="table-cell">
+                                <p class="hello">16 OCT 2022</p>
+                            </div>
+                            <div class="table-cell">
+                                <div data-dropdown class="dropdown-menu">
+                                    <i data-dropdown-btn class="fa-solid fa-ellipsis-vertical link"> </i>
+                                    <div class="dropdown-list">
+                                        <li class="list-flex"><p class="options">Subsidiary</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Division</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Project Site</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Business Unit</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Brnach</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Product Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Functional Group</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                        <li class="list-flex"><p class="options">Region</p><i class="fa-solid fa-circle-plus plus-space"></i></li>
+                                    </div>
+                                </div>
+                                    
+                               
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#menu').click(function(){
+    $('#sidebar').toggleClass("active");
+})
+
+$('#menu2').click(function(){
+    $('#sidebar').toggleClass("active");
+})
+    </script> 
+    <script>
+        flatpickr(".hello", {});
+    </script>
+    <script src="https://kit.fontawesome.com/632fa960e6.js" crossorigin="anonymous"></script>
+</body>
+</html>
